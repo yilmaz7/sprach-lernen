@@ -1,40 +1,53 @@
 *{box-sizing: border-box;}
-body{margin: 0;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
-
+body
+{
+    margin: 0;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
 
 header
 {
-    height: 65px;
+    height: 8vh;
     background-color: #555;
+    width: 100vw;
 }
 
 main
 {
+    height: 92vh;
     display: flex;
     padding-right: 20px;
-    
-
 }
 
-body
+main section
 {
-    background-color: black;
+    width: 50%;
+    
+   
+}
 
+aside
+{
+    width:50%;
+    
+    background: #b8dda6;
+}
+
+aside section
+{
+    width: 100%;
 }
 
 .slider
 {
-    height: 800px;
+    
     position: relative;
     width: 80%;
-    
     display: flex;
     justify-content: center;
     align-items:flex-start;
-
     overflow: hidden;
 }
-
 
 .slider .overlay
 {
@@ -46,6 +59,7 @@ body
     top: 0;
     left: 0;
 }
+
 #bild1, #bild2, #bild3
 {
     width: 100%;
@@ -55,21 +69,24 @@ body
     left: 0;
     background-position: center;
     background-size: cover;
-
     transition: opacity 1s;
 }
+
 #bild1
 {
     background-image: url("bild1.jpg");
 }
+
 #bild2
 {
     background-image: url("bild2.jpg");
 }
+
 #bild3
 {
     background-image: url("bild3.jpg");
 }
+
 .slider h3
 {
     color: white;
@@ -77,6 +94,7 @@ body
     position: absolute;
     transition: opacity 1s;
 }
+
 .slider button
 {
     position: absolute;
@@ -90,70 +108,146 @@ body
     outline: none;
     cursor: pointer;
 }
+
 #text2, #text3
 {
     opacity: 0;
 }
+
 .slider button:hover
 {
     background-color: rgba(68, 68, 68, 0.502);
 }
-#weiter
+
+#weiter1
 {
     right: 40px;
 }
+
 #zurueck
 {
     left: 40px;
 }
 
 
+/* ============ ASİDE 1 ================*/
 
+.setze
+{
+    height: 500px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI";
+}
 
+.container
+{
+    width: 700px;
+    padding: 25px;
+    border: 1px solid #78886c;
+    background-color: none;
+}
 
+.form
+{
+    display: none;
+    flex-direction: column;
+}
 
+.form span
+{
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+}
+
+.form input
+{
+    margin-bottom: 8px;
+    outline: none;
+    padding: 5px 8px;
+}
+
+.form div
+{
+    margin: 8px 0;
+}
+
+.frage
+{
+/*background-color: rgb(149, 189, 126);*/
+font-size: 25px;
+padding-left: 15px;
+
+}
+
+div .frage
+{
+    margin-bottom: 50px;
+}
+
+.antwort
+{
+/*background-color: rgb(109, 153, 105);*/
+font-size: 25px;
+padding-left: 15px;
+}
+
+.container h2
+{
+    margin-top: 0;
+}
+
+.buttons
+{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button
+{
+    outline: none;
+    border: none;
+    padding: 10px 23px;
+    background-color: darkorange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#gesendet
+{
+    display: none;
+    text-align: center;
+}
+
+/* ============ ASİDE 2 ================*/
 
 :root
 {
     --primary: #1B98E0;
     --primaryHover: #006494;
-    --background: #E8F1F2;
+    --background: #b8dda6;
     --text: #13293D;
 }
 
-
-
-
-
-
-
-
-
-
-.container
-{
-    width: 20%;
-    align-items: flex-end;
-    padding-right: 20px;
-    width: 800px;
-    background-color: var(--background);
-    background-color: chartreuse;
-    padding-left: 20px;
-    
-}
 .collapse
 {   
-
-
-    
-    
     border-radius: 10px;
     padding: 15px 35px 15px -10px;
     position: relative;
-    margin-bottom: 25px;
-
+    margin:0 0 25px 15px;
+    background: #b8dda6;
 }
-
 
 .titel
 {
@@ -163,14 +257,18 @@ body
     padding-bottom: 5px;
 }
 
+h1
+{
+    display: flex;
+    justify-content: center;
+}
+
 .inhalt
 {
     font-size: 1.7em;
     margin-top: 15px;
-
     overflow: hidden;
     max-height: 0;
-
     transition: max-height 0.5s;
 }
 
@@ -191,10 +289,12 @@ body
     color: white;
     cursor: pointer;
 }
+
 .btn:hover
 {
     background-color: var(--primaryHover);
 }
+
 .btn i
 {
     transform: rotate(180deg);

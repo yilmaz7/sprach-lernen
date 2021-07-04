@@ -1,3 +1,7 @@
+
+//==================   SLİDER (SAĞA SOLA KAYDIRMA)  ==================//
+
+
 var bild1 = document.getElementById("bild1");
 var bild2 = document.getElementById("bild2");
 var bild3 = document.getElementById("bild3");
@@ -75,7 +79,7 @@ function prev()
 }
 
 
-
+        //==================   SÄTZE   ==================//
 
 
 function col(button)
@@ -90,5 +94,96 @@ function col(button)
     else //wenn maxHeight NULL ist (keine Inline-Style oder maxHeight = null gesetzt)
     {
         inhalt.style.maxHeight = inhalt.scrollHeight + "px";
+    }
+}
+
+
+
+
+
+
+
+//=====================  COLLAPSE ( GENİŞLEME DARALMA)  =====================//
+
+
+
+
+var aktuell = 0;
+var forms = document.getElementsByClassName("form");
+
+
+function nav(n)
+{
+    if(schrittCheck(n))
+        return;
+
+    forms[aktuell].style.display = "none";
+    aktuell += n;
+    forms[aktuell].style.display = "flex";
+    
+
+    buttonUpdate(n);
+}
+
+
+
+function buttonUpdate(n)
+{
+    if(aktuell == 0) // WENN WIR IN ERSTEM SCHRITT SIND
+    {
+        document.getElementById("zurueck").style.opacity = "0";
+    }
+    else
+    {
+        document.getElementById("zurueck").style.opacity = "1";
+    }
+
+    if(aktuell == forms.length-1) // WENN WIR IN LETZTEM SCHRITT SIND
+    {
+        document.getElementById("weiter").innerHTML = "Senden";
+    }
+    else
+    {
+        document.getElementById("weiter").innerHTML = "Weiter";
+    }
+}
+
+
+
+
+function schrittCheck(x)
+{
+    if(aktuell == forms.length-1 && x == 1) // WENN LETZTER SCHRITT und WENN WEITER GEHEN WILL
+    {
+        senden();
+        return true;
+    }
+    if(aktuell == 0 && x == -1) // WENN ERSTER SCHRITT und WENN ZURÜCK GEHEN WILL
+    {
+        return true;
+    }
+
+    return false; // alles OKAY
+
+}
+
+function buttonUpdate()
+{
+    if(aktuell == 0) // WENN WIR IN ERSTEM SCHRITT SIND
+    {
+        document.getElementById("zurueck").style.opacity = "0";
+    }
+    else
+    {
+        document.getElementById("zurueck").style.opacity = "1";
+    }
+
+    if(aktuell == forms.length-1) // WENN WIR IN LETZTEM SCHRITT SIND
+    {
+        document.getElementById("weiter").innerHTML = "Ende";
+    }
+    else
+    {
+        document.getElementById("weiter").innerHTML = "Weiter";
     }
 }
