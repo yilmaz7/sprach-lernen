@@ -43,6 +43,7 @@ aside section
     
     position: relative;
     width: 80%;
+    height: 1500px;
     display: flex;
     justify-content: center;
     align-items:flex-start;
@@ -58,6 +59,11 @@ aside section
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.slider img
+{
+    width: 100%;
 }
 
 #bild1, #bild2, #bild3
@@ -299,4 +305,46 @@ h1
 {
     transform: rotate(180deg);
     transition: transform 0.5s;
+}
+
+
+.blink {
+
+	-webkit-animation: blink 1s linear infinite;
+	-moz-animation: blink 1s linear infinite;
+	-ms-animation: blink 1s linear infinite;
+	-o-animation: blink 1s linear infinite;
+	 animation: blink 5s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 0%; }
+	0% { opacity: 10%; }
+	0% { opacity: 5%; }
+	50% { opacity: 90%; }
+	50.01% { opacity: 100%; }
+	100% { opacity: 10%; }
 }
